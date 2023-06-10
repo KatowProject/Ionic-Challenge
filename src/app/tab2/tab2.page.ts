@@ -2,6 +2,7 @@ import { ShowMapModalComponent } from './../show-map-modal/show-map-modal.compon
 import { Component, OnInit } from '@angular/core';
 import { StorageManagementService } from '../services/storage-management.service';
 import { ModalController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -9,15 +10,22 @@ import { ModalController } from '@ionic/angular';
 })
 export class Tab2Page implements OnInit {
   data: any[] = [];
+  isLoaded = false;
   constructor(
     private storageManagementService: StorageManagementService,
-    private modalController: ModalController
-  ) { }
+    private modalController: ModalController,
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe(async (params) => {
+      if (!this.isLoaded) return;
+
+      this.getAllData();
+    });
+  }
 
   ngOnInit(): void {
     this.getAllData();
-
-    console.log(this.data);
+    this.isLoaded = true;
   }
 
   async getAllData() {
