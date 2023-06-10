@@ -13,7 +13,7 @@
         <ion-label>History Scan</ion-label>
       </ion-list-header>
       <ion-item *ngFor="let d of data;let i = index">
-        <ion-label>1. {{d.nik}} | {{ d.nama }} | {{ d.type }}</ion-label>
+        <ion-label>{{ i + 2 }}. {{d.nik}} | {{ d.nama }} | {{ d.type }}</ion-label>
         <!-- show maps -->
         <ion-button (click)="showMap(d)">
           <ion-icon name="map"></ion-icon>
