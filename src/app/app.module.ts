@@ -10,8 +10,8 @@ import { ShowMapModalComponent } from './show-map-modal/show-map-modal.component
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, ShowMapModalComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  declarations: [AppComponent, ShowMapModalComponent],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
