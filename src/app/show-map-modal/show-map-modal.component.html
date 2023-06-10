@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lokasi Map
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" (click)="dismiss()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nama</ion-label>
+      <ion-input type="text" [(ngModel)]="data.nama" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">NIK</ion-label>
+      <ion-input type="number" placeholder="Input Data" [(ngModel)]="data.nik" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tempat Lahir</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.tempat_lahir" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tanggal Lahir</ion-label>
+      <ion-input type="date" placeholder="Input Data" [(ngModel)]="data.tanggal_lahir" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Jenis Kelamin</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.jenis_kelamin" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Alamat</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.alamat" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Agama</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.agama" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Status Perkawinan</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.status_perkawinan" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Pekerjaan</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.pekerjaan" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Kewarganegaraan</ion-label>
+      <ion-input type="text" placeholder="Input Data" [(ngModel)]="data.kewarganegaraan" readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Berlaku Hingga</ion-label>
+      <ion-input type="date" placeholder="Input Data" [(ngModel)]="data.berlaku_hingga" readonly="true"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <iframe width="90%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" [src]="mapUrl"
+    class="ion-text-center"></iframe>
+</ion-content>
